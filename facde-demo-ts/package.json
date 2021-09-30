@@ -1,5 +1,13 @@
 {
+  "name": "facde-demo-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "kangbo",
+  "license": "MIT",
   "dependencies": {
     "vite": "^2.6.1"
+  },
+  "scripts": {
+    "dev":"vite"
   }
 }
