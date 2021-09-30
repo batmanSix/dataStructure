@@ -8,7 +8,7 @@
  *  有个工厂通过传入的状态来给我自动实力话相应的类
  *
  */
-import  modelTypes from "./type.js";
+import { modelTypes, modalClassName} from "./type.js";
 class modal {
   constructor(status) {
     this.status = status;
@@ -31,7 +31,7 @@ class modal {
     return classStr;
   }
   static changeStatusExit(types,status){
-    if(k in types){
+    for(let k in types){
       if(types[k] === status){
         return true
       }
@@ -80,31 +80,33 @@ class ModalFactory {
   constructor(dom) {
     this.dom = dom;
   }
-
   create(title, status) {
+    
+    console.log(modal,"modal")
     const StatusExit = modal.changeStatusExit(modelTypes,status)
+
     if(!StatusExit){
       throw new Error('modal types is incorrect')
     }
+    let modals = null;
     const dom = this.dom;
-    let modal = null;
     switch (status) {
       case modelTypes.success:
-        modal = new successModal(title);
+        modals = new successModal(title);
         break;
       case modelTypes.warning:
-        modal = new warnModal(title);
+        modals = new warnModal(title);
         break;
       case modelTypes.error:
-        modal = new errorModal(title);
+        modals = new errorModal(title);
         break;
       default:
         break;
     }
 
 
-    dom.getElementsByTagName('header')[0].innerText = modal.title
-    dom.className = modal.className
+    dom.getElementsByTagName('header')[0].innerText = modals.title
+    dom.className = modals.className
 
     return{
       outputInfo: modal.outputInfo

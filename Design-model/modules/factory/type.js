@@ -1,7 +1,12 @@
 const modelTypes = {
-  success: 's',
+  success: "s",
   error: "e",
-  warning: "w"
-}
+  warning: "w",
+};
 
-export default modelTypes
+const modalClassName = {
+  success: "success",
+  warning: "warn",
+  error: "error",
+};
+export  { modelTypes, modalClassName };
