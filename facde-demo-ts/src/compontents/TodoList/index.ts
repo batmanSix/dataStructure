@@ -1,24 +1,36 @@
 import { ITodoData } from './../../types/index';
+import Input, { IInputOptions } from "./subs/Input"
 class TodoList {
   private el:HTMLElement;
   private todoData: ITodoData
+  private input: Input  
+  private todoWrapper: HTMLElement
   constructor(el:HTMLElement,todoData: ITodoData){
     this.el = el
     this.todoData = todoData
+    this.todoWrapper = document.createElement('div')
   }
 
   public init(){
-    this.createComponent() 
+    this.createComponents() 
     this.render()
     this.bindEvent() 
   }
 
   private render(){
-    console.log('render')
+    this.el.appendChild(this.todoWrapper)
+    this.input.render()
   }
 
-  private createComponent(){
-    console.log('create')
+   
+ 
+  private createComponents(){
+    this.input = new Input(<IInputOptions>{
+      wrapperEl: this.todoWrapper,
+      placeholderText: '请输入',
+      buttonText: '增加'
+    })
+    console.log('createComponents')
   }
 
   private bindEvent(){
