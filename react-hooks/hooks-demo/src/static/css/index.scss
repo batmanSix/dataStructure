@@ -1,0 +1,15 @@
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  background: #37f;
+  color: #fff;
+  padding: .5rem .6rem;
+  height: 4rem;
+  box-sizing: border-box;
+}
+.icon{
+  display: inline-block;
+  font-size: 2rem;
+}
