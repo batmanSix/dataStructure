@@ -1,6 +1,6 @@
 npm 包管理工具
 
-npm install jquery 安装jquery
+npm install jquery 安装jquery  (npm install) === npm i
 
 npm uninstall jquery 卸载jquery
 
@@ -8,6 +8,20 @@ npm 初始化pack.json npm init -y
 
 npm list 查看npm 依赖包目录
 筛选当前的包 npm list | grep gulp
+
+npm view jquery version 查看npm 具体包的版本
+
+npm install jquery@1 - s  如果是以@开头 不写具体版本则安装的是当前数字开头的最高版本
+
+npm 查看安装包的版本 npm view jquery version --json 或者 npm view jquery version
+
+npm package versions 
+#major13, #minor4,patch6 
+^锁定major ~锁定minor 空锁定patch
+
+npm outdated 查看过期包
+
+
 
 开发安装包： npm i xxx包名 -D     devDependencies 开发环境
 生产坏境安装包： npm i xxx包名 -S  dependencies 生产坏境
