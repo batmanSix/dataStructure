@@ -1,0 +1,19 @@
+npm 包管理工具
+
+npm install jquery 安装jquery
+
+npm uninstall jquery 卸载jquery
+
+npm 初始化pack.json npm init -y
+
+npm list 查看npm 依赖包目录
+筛选当前的包 npm list | grep gulp
+
+开发安装包： npm i xxx包名 -D     devDependencies 开发环境
+生产坏境安装包： npm i xxx包名 -S  dependencies 生产坏境
+
+
+
+
+
+node 的依赖模块可以直接在pack.json 里面直接运行，node 会自动读取node_modules 里面的bin 目录

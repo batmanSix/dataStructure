@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "jquery": "^3.6.0"
+  },
+  "scripts": {
+    "dev": "gulp -v"
+  },
+  "name": "node-test",
+  "version": "1.0.0",
+  "main": "index1.js",
+  "devDependencies": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
