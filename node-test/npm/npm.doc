@@ -22,6 +22,9 @@ npm package versions
 npm outdated 查看过期包
 
 
+npm 登录 npm login 或者 npm adduser
+
+
 
 开发安装包： npm i xxx包名 -D     devDependencies 开发环境
 生产坏境安装包： npm i xxx包名 -S  dependencies 生产坏境
