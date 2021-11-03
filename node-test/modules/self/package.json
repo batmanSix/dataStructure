@@ -1,0 +1,15 @@
+{
+  "name": "self-custom",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "kangbobo",
+  "scripts": {},
+  "devDependencies": {
+    "lodash": "^4.17.21",
+    "self-custom": "^1.0.0"
+  },
+  "dependencies": {
+    "user": "0.0.0"
+  }
+}
