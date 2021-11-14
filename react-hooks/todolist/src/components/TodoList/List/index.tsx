@@ -1,11 +1,11 @@
 
 
-const TDinput = () =>{
+const TDList = () =>{
   return(
-    <div>
-      2
+    <div className="td-list">
+      list
     </div>
   )
 }
 
-export default TDinput
+export default TDList

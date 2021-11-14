@@ -1,0 +1,1 @@
+console.log("这node脚本")

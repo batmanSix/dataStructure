@@ -25,12 +25,17 @@ npm outdated 查看过期包
 npm 登录 npm login 或者 npm adduser
 
 
+npm 自定义脚本 可以输出特定的配置文件中的数据 echo $npm_package_config_env
+
+npm 并行执行脚本 demo1 & demo2  串行脚本 demo1 && demo2
+
+
 
 开发安装包： npm i xxx包名 -D     devDependencies 开发环境
 生产坏境安装包： npm i xxx包名 -S  dependencies 生产坏境
 
 
-
-
-
 node 的依赖模块可以直接在pack.json 里面直接运行，node 会自动读取node_modules 里面的bin 目录
+
+
+npx 安装模块
