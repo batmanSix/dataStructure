@@ -1,5 +1,6 @@
 <template>
   <div>
+    <school></school>
     <counter :result="result"></counter>
     <div>
       <cbutton innerText="+" actions="PLUS" @dispatch="dispatch"></cbutton>
@@ -11,10 +12,12 @@
 import counter from "./counter.vue"
 import cbutton from "./cbutton.vue"
 import dispatch from "../dispatchers/counter"
+import school from "./publish/school.vue"
 export default {
   components:{
     counter,
-    cbutton
+    cbutton,
+    school
   },
   data() {
     return {

@@ -20,5 +20,9 @@ yarn build
 yarn lint
 ```
 
+
+### todoList
+实现 vue 中发布订阅模式
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).

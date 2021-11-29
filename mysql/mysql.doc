@@ -1,0 +1,11 @@
+sql 概述 
+(structured  query language )
+
+1. ddl  data definition language 数据库定义语言
+   ddl 用于完成对数据库，数据表，视图，索引， 的创建修改
+2. dml  data manipulation language 数据库操作语言
+   dml 用于完成对数据库表的添加，删除，修改操作
+3. dql  data query language 数据库查询语言
+4. dcl  data control language 数据控制语言
+
+
