@@ -6,7 +6,11 @@
   </div>
 </template>
 <script>
+// 订阅消息
 export default {
+  props:{
+     
+  },
   data() {
     return {
       
