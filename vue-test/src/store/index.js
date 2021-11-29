@@ -1,5 +1,6 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import getters from "./modules/getters"
 Vue.use(Vuex);
 
 const modulesFiles = require.context("./modules", false, /\.js$/);
@@ -17,6 +18,7 @@ const store = new Vuex.Store({
   state: {},
   mutations: {},
   actions: {},
+  getters,
   modules: modules,
 });
 
