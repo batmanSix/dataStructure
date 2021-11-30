@@ -7,7 +7,7 @@ export default {
   getters: {
     bigSum(state){
       console.log(state,"here")
-      return state.number+= 10
+      return state.number*2
     }
   },
   actions: {
