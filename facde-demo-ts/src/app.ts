@@ -2,7 +2,7 @@ import { ITodoData } from './types/index';
 import TodoList from "./compontents/TodoList"
 ((doc)=>{
   const app: HTMLElement = doc.querySelector("#app")
-  const todoData:ITodoData[] =[{
+  const todoData: ITodoData[] =[{
     id: 1,
     content: "213",
     completed: false

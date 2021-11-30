@@ -8,19 +8,16 @@ export interface IListOptions{
 } 
 
 class List extends Component {
-  private options: IListOptions;
   private static todoData:ITodoData[]
-  private static wrapperEl:HTMLElement
+  private wrapperEl:HTMLElement
   constructor(options:IListOptions){
     super();
     List.todoData = options.todoData
-    List.wrapperEl = options.wrapperEl
-    this.options = options
+    this.wrapperEl = options.wrapperEl
   }
 
   public render(){
-    console.log(this.options.wrapperEl,"wrapperEl")
-    this.options.wrapperEl.innerHTML += Component.listView(
+    this.wrapperEl.innerHTML += Component.listView(
         List.todoData
     )
   }
@@ -85,7 +82,8 @@ class List extends Component {
     }
 
     List.todoData.push(items);
-    List.wrapperEl.innerHTML +=Component.todoView(items)
+    // // List.wrapperEl.innerHTML +=Component.todoView(items)
+    document.querySelector('.todo-list').innerHTML += Component.todoView(items)
   }
 
 

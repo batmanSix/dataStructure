@@ -15,7 +15,6 @@ class Input extends Component {
   }
 
   public render(){
-    console.log(this.options.wrapperEl,"wrapperEl")
     const { placeholderText,buttonText, } = this.options
     this.options.wrapperEl.innerHTML += Component.inputView(
       placeholderText,
@@ -32,7 +31,6 @@ class Input extends Component {
 
   private handleBtnClick(inputdom){
     const val:string = inputdom.value.trim()
-
     if(val.length){
       List.addItem(val);
       inputdom.value = ''

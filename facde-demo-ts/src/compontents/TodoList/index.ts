@@ -3,11 +3,11 @@ import Input, { IInputOptions } from "./subs/Input"
 import List, { IListOptions } from "./subs/List"
 class TodoList {
   private el: HTMLElement;
-  private todoData: ITodoData
+  private todoData: ITodoData[]
   private input: Input
   private todoWrapper: HTMLElement
   private list: List
-  constructor(el: HTMLElement, todoData: ITodoData) {
+  constructor(el: HTMLElement, todoData: ITodoData[]) {
     this.el = el
     this.todoData = todoData
     this.todoWrapper = document.createElement('div')
@@ -31,20 +31,19 @@ class TodoList {
   private createComponents() {
     this.input = new Input(<IInputOptions>{
       wrapperEl: this.todoWrapper,
-      placeholderText: '请输入文字',
-      buttonText: '增加'
+      placeholderText: '请输入',
+      buttonText: '新增'
     })
     this.list = new List(<IListOptions><unknown>{
-        todoData: this.todoData,
-        wrapperEl: this.todoWrapper
-      })
+      todoData: this.todoData,
+      wrapperEl: this.todoWrapper
+    })
   }
 
   // 绑定事件
   private bindEvent() {
-    console.log(this.input,"this")
     this.input.bindEvent()
-    // this.list.bindEvent()
+    this.list.bindEvent()
   }
 }
 
