@@ -14,6 +14,7 @@ abstract class Component {
   }
 
   protected static todoView(todo: ITodoData): string {
+    console.log(todo, "we")
     const { id,
       content,
       completed } = todo
@@ -28,14 +29,13 @@ abstract class Component {
 
   // 渲染list 组件
 
-  protected static listView(data:ITodoData[]):string {
+  protected static listView(data: ITodoData[]): string {
     return `
       <div class="todo-list">
-        ${
-          data.length ? data.map((todo:ITodoData)=>{
-            return Component.todoView(todo)
-          }) : '当前没有数据'
-        }
+        ${data.length > 0 ? data.map((todo: ITodoData) => {
+      return Component.todoView(todo)
+    }) : '当前没有数据'
+      }
       </div>`.split(',').join('');
   }
 

@@ -38,13 +38,13 @@ class TodoList {
         todoData: this.todoData,
         wrapperEl: this.todoWrapper
       })
-    console.log('createComponents')
   }
 
   // 绑定事件
   private bindEvent() {
-    console.log('bindEvent')
+    console.log(this.input,"this")
     this.input.bindEvent()
+    // this.list.bindEvent()
   }
 }
 

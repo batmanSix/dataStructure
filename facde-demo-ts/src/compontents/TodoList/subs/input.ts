@@ -26,7 +26,7 @@ class Input extends Component {
   public bindEvent(){
     const addBtn:HTMLElement = document.querySelector('.add-btn');
     const onInput:HTMLElement = document.querySelector('.todo-input')
-
+    console.log(addBtn,"here")
     addBtn.addEventListener('click',this.handleBtnClick.bind(this,onInput))
   }
 

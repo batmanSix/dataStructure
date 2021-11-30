@@ -31,7 +31,6 @@ class List extends Component {
   public bindEvent() {
     const oTodoList:HTMLElement = document.querySelector('.todo-list')
     oTodoList.addEventListener('click',this.handleBtnClick.bind(this))
-
   }
 
   private handleBtnClick(e:MouseEvent){
@@ -39,6 +38,8 @@ class List extends Component {
     const tarName = tar.tagName.toLowerCase()
 
     const oTodoItems:HTMLCollection = document.getElementsByClassName("todo-item");
+
+    console.log(tarName,"jere")
     switch(tarName){
       case 'input':
        this._handleCheckBoxClick(tar,oTodoItems)
@@ -50,8 +51,9 @@ class List extends Component {
         break;
     }
 
-  }
+  } 
 
+  // 选择
   private _handleCheckBoxClick(target:HTMLElement,oTodoItems:HTMLCollection){
     const id:number = parseInt(target.dataset.id)
     List.todoData = List.todoData.map((todo:ITodoData,index:number)=>{
@@ -64,8 +66,15 @@ class List extends Component {
     })
   }
   
+  // 删除
   private _handleButtonClick(target:HTMLElement,oTodoItems:HTMLCollection){
-
+    const id:number = parseInt(target.dataset.id)
+    List.todoData = List.todoData.map((todo:ITodoData,index:number)=>{
+      if(todo.id === id){
+        oTodoItems[index].remove();
+      }
+      return todo
+    })
   }
 
   public static addItem(val:string){
@@ -76,9 +85,7 @@ class List extends Component {
     }
 
     List.todoData.push(items);
-    console.log(List.todoData,"List")
     List.wrapperEl.innerHTML +=Component.todoView(items)
-    
   }
 
 
