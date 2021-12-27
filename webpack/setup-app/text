@@ -1,0 +1,26 @@
+webpack dev-server 原理
+
+模块热替换(hot module replacement 或 HMR)是 webpack 提供的最有用的功能之一。它允许在运行时更新所有类型的模块，而无需完全刷新
+
+webpack 使用热更新 首先要安装 npm install webpack webpack-dev-server --save-dev
+
+
+devServer: {
+    contentBase: path.resolve(__dirname, 'dist'),
+    hot: true, // 重点关注
+    historyApiFallback: true,
+    compress: true
+}
+
+
+热更新的过程
+几个重要的概念（这里有一个大致的概念就好，后面会把它们串起来）：
+
+Webpack-complier ：webpack 的编译器，将 JavaScript 编译成 bundle（就是最终的输出文件）
+HMR Server：将热更新的文件输出给 HMR Runtime
+Bunble Server：提供文件在浏览器的访问，也就是我们平时能够正常通过 localhost 访问我们本地网站的原因
+HMR Runtime：开启了热更新的话，在打包阶段会被注入到浏览器中的 bundle.js，这样 bundle.js 就可以跟服务器建立连接，通常是使用 websocket ，当收到服务器的更新指令的时候，就去更新文件的变化
+bundle.js：构建输出的文件
+
+
+webpack 只能理解js json文件 loader 可以加载其余类型的文件
