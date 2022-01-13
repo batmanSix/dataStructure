@@ -33,10 +33,16 @@ let tree = [
 function treeToArray(tree) {
   return tree.reduce((res, item) => {
     const { children, ...i } = item
-    console.log(i,"i")
+
     return res.concat(i, children && children.length ? treeToArray(children) : [])
   }, [])
 }
+
+const  treeToArray = (tree) => tree.reduce((res, item)=>{
+  const { children, ...i } = item
+  return res.concat(i, children && children.length ? treeToArray(children) : [])
+},[])
+
 treeToArray(tree)
 // console.log(treeToArray(tree))
 
