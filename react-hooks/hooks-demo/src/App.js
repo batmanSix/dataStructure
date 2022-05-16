@@ -5,6 +5,7 @@ import Test from "./components/test";
 import Header from "./components/header"
 import HeaderInput from "./components/headerInput"
 import TodoList from "./components/todoList"
+import List from "./components/list"
 function App() {
 
   // const [title,setTitle] = useState('hooks测试');
@@ -50,6 +51,7 @@ function App() {
           })
         }
       </ul>
+      <List></List>
     </div>
   );
 }
